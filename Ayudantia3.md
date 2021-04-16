@@ -32396,10 +32396,7 @@ Titanic
 
 ``` r
 attach(Titanic)
-AGE = boxplot(AGE, horizontal = FALSE)
 ```
-
-![](Ayudantia3_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ``` r
 Age1 <- filter(Titanic, Titanic$AGE < 20)
