@@ -1,0 +1,73 @@
+---
+title: "Untitled"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+getwd()
+wd = setwd("C:/Users/Cristobal/Desktop/Minería de D")
+
+
+Pokemon = read.csv("pokemon.csv")
+Pokemon
+```
+```{r}
+Poke123 = filter(Pokemon, Pokemon$Generation %in% c(1, 2, 3))
+Poke123
+
+```
+
+```{r}
+attach(Pokemon)
+Def = boxplot(Defense, horizontal = FALSE)
+```
+```{r}
+stats_def = boxplot.stats(Defense)
+
+Def
+```
+```{r}
+Pokemon1 <- Defense[Defense < 140]
+length(Defense) - length(Pokemon1)
+```
+```{r}
+boxplot(Pokemon1, horizontal =FALSE)
+```
+
+```{r}
+Def_out <- filter(Pokemon, Pokemon$Defense > 145)
+
+Def_out
+```
+```{r}
+SPD = boxplot(Pokemon$Speed, horizontal = FALSE)
+```
+```{r}
+SPD <- filter(Pokemon, Pokemon$Speed < 60)
+
+SPD ## Pokemon más lentos
+```
+```{r}
+##Caso 3 :
+wd = setwd("C:/Users/Cristobal/Desktop/Minería de D")
+
+
+Titanic = read.csv("titanic.csv")
+Titanic
+
+  
+```
+```{r}
+attach(Titanic)
+AGE = boxplot(AGE, horizontal = FALSE)
+```
+```{r}
+Age1 <- filter(Titanic, Titanic$AGE < 20)
+
+Age1
+```
+
+
